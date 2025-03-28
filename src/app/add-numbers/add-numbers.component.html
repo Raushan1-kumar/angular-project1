@@ -1,0 +1,12 @@
+
+
+Fno: <input type="number" [(ngModel)]="num1"/>
+<br/>
+Sno: <input type="number" [(ngModel)]="num2"/>
+<br/>
+<button (click)="calculate($event)" value="add">Add</button>
+<button (click)="calculate($event)" value="mul">Multiply</button>
+<button (click)="calculate($event)" value="divide">Divide</button>
+<button (click)="calculate($event)" value="subtract">Subtract</button>
+<br/>
+{{result}}
