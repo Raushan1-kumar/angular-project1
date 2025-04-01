@@ -4,6 +4,38 @@
 
 <!-- <app-add-numbers></app-add-numbers> -->
 <!-- <button (click)="show()">{{a}}</button> -->
- <button (click)="show()">{{k?"hide":"show"}}</button>
+ <!-- <button (click)="show()">{{k?"hide":"show"}}</button>
 <h1 *ngIf="k">{{i}}</h1>
 <h1 *ngIf="k" class="text-success">hii</h1>
+{{names}}
+
+<p *ngFor="let n of names" class="text-success">{{n}}</p> -->
+<!-- 
+<select [(ngModel)]="color">
+    <option value="red">red</option>
+    <option value="green">green</option>
+    <option value="blue">blue</option>
+</select>
+<p [ngSwitch] ="color">
+<span *ngSwitchCase="'red'">Red color</span>
+<span *ngSwitchCase="'green'">Green color</span>
+<span *ngSwitchCase="'yellow'">yellow color</span>
+<span *ngSwitchCase="'brown'">brown color</span>
+<span *ngSwitchDefault="'red'">Red color</span>
+</p> -->
+<!-- <div [ngStyle]="{'background-color':color}" style="height: 200px; width: 100px;"></div> -->
+
+
+
+<!-- <style type="text/css">
+    .text-succes{color:rgb(136, 9, 119); font-size: 20px; font-weight: 600;}
+    .text-daner{color:rgb(31, 77, 130); font-size: 20px; font-weight: 600;}
+</style>
+<button (click)="change()">change color</button>
+<p [ngClass]="{'text-daner':status, 'text-succes':!status }">Hello amiya</p> -->
+
+
+{{'PRABIN' | reverseString}}
+{{12 | squareNumber}}<p>Uppercase of hello world : {{'hello world' | uppercase}}</p>
+<p>Lowercase of HELLO WORLD : {{'hello world' | uppercase}}</p>
+<p>Titlecase  : {{'angular pipes' | titlecase}}</p>
