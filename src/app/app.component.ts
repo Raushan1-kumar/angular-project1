@@ -9,24 +9,24 @@ import { AddNumbersComponent } from './add-numbers/add-numbers.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ReverseStringPipe } from './reverse-string.pipe';
+import { MyServiceService } from './my-service.service';
+
+
 import { SquareNumberPipe } from './square-number.pipe';
+import { disableDebugTools } from '@angular/platform-browser';
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
     HeaderComponent,
     FooterComponent,
-    BodyComponent,
-    AddNumbersComponent,
-    CommonModule,
-    FormsModule,
-    ReverseStringPipe,
-    SquareNumberPipe,
+  
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  title="project"
   // i=100;
   // a:string="show";
   // k=false;
@@ -42,9 +42,20 @@ export class AppComponent {
   //   }
   // }
   // title = 'project';
-  color = 'red';
-  status = true;
-  change() {
-    this.status = !this.status;
+  // color = 'red';
+  // status = true;
+  // change() {
+  //   this.status = !this.status;
+  // }
+
+
+
+  message="";
+  
+  constructor(private obj:MyServiceService){ }
+  fetchData(){
+    this.obj.mymessage().subscribe(data=>
+      this.message=data
+    );
   }
 }
